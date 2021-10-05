@@ -1,7 +1,8 @@
 import sys
 import math
 
-class jh_pbar:
+
+class jhpbar:
     def __init__(self, steps, size=20, prefix='', postfix='', color=0):
         self.size = size
         self.steps = steps
@@ -31,7 +32,6 @@ class jh_pbar:
             self.prefix = prefix
         if postfix != '':
             self.postfix = postfix
-
         self.progress = math.ceil(self.count / self.update_step)
 
         self.progress_bar = self.progress_bar_origin.replace('-', '▉', self.progress)
@@ -44,6 +44,7 @@ class jh_pbar:
 
     def reset(self, progress=1, prefix='', postfix=''):
         self.progress = progress
+        self.count = 0
         self.progress_bar = '-' * self.size
 
         if prefix != '':
