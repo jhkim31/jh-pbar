@@ -65,6 +65,16 @@ reset the progress bar
 #### parameter
 1. progress (default=1) : reset the progress(logical step)
 2. prefix, postfix (default='')
-#### parameter
  
+
+## Sample Code
+```python
+from jhpbar import jhpbar
+j = jhpbar(steps=10, size=20, prefix='Prefix!', postfix='Postfix!', color=1)
+
+import time
+for i in range(10):
+    j.update(1)
+    time.sleep(1)
+```
  
