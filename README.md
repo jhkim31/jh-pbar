@@ -41,7 +41,7 @@ j.reset()
 
 ## Docs
 
-### jhpbar
+### jhpbar(size=Integer, steps=Integer, prefix = String, postfix = String, color = [0,3])
 #### init parameter
 1. steps (required) : progress total size (logical size)
 2. size (default=20) : The size shown on the screen. (phcsical size)
@@ -54,13 +54,13 @@ j.reset()
     3 : blue
 
 
-### jhpbar.update
+### jhpbar.update(count=Integer, prefix=String, postfix=String)
 update the progress bar
 #### parameter
 1. count (default = 1) : Fill the progress bar by count 
 2. prefix, postfix (default = '')
 
-### jhpbar.reset
+### jhpbar.reset()
 reset the progress bar
 #### parameter
 1. progress (default=1) : reset the progress(logical step)
